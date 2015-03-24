@@ -10,7 +10,6 @@ import javax.swing.*;
  * @version (a version number or a date)
  */
 public class Frame extends JFrame {
-    private Model model;
     private TView TopView;
     private BView BottomView;
 
