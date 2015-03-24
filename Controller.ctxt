@@ -2,4 +2,7 @@
 comment0.params=
 comment0.target=Controller()
 comment0.text=\n\ Constructor\ for\ Controller\n
-numComments=1
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment1.text=\n\ Perform\ an\ appropriate\ action\n\ @param\ e\ is\ an\ event\n
+numComments=2

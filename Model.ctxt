@@ -1,7 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Model()
-comment0.text=\n\ Constructor\ for\ class\ Model\n
+comment0.text=\n\ Constructor\ for\ class\ Model\n\ @throws\ FileNotFoundException\n
 comment1.params=
 comment1.target=void\ readFile()
+comment1.text=\n\ Reads\ the\ given\ file,\ "vocabulary.txt",\ and\ stores\ information\ into\ a\ Map,\ dictionary.\n\ @throws\ FileNotFoundException\n
 numComments=2

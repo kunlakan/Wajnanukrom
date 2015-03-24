@@ -1,6 +1,4 @@
 import java.io.*;
-import java.util.*;
-
 /**
  * Write a description of class main here.
  * 
@@ -11,6 +9,6 @@ import java.util.*;
  */
 public class Wajnanukrom {    
     public static void main(String[] arg) throws FileNotFoundException{
-        Model model = new Model();
+        Frame frame = new Frame();
     }
 }
