@@ -12,6 +12,7 @@ import javax.swing.*;
 public class Frame extends JFrame {
     private TView TopView;
     private BView BottomView;
+    private Model model;
 
     /**
      * Constructor for class Frame
@@ -19,8 +20,11 @@ public class Frame extends JFrame {
     public Frame() throws FileNotFoundException{
         super("Wajnanukrom Th-Kh Dictionary");
         
-        TopView = new TView();
-        BottomView = new BView();
+        model = new Model();
+        TopView = new TView(model);
+        BottomView = new BView(model);
+        
+        model.addObserver(BottomView);
         
         setFrameProperty();
     }
