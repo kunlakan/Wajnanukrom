@@ -12,8 +12,8 @@ import java.util.*;
 public class Model extends Observable
 {
     //private Controller controller;
-    private Map<String, String[]> dictionary;
-    private String[]  words;
+    private Map<String, List<String>> dictionary;
+    private List<String> words;
     private BView bview;
 
     /**
@@ -21,7 +21,7 @@ public class Model extends Observable
      * @throws FileNotFoundException
      */
     public Model() throws FileNotFoundException {
-        dictionary = new TreeMap<String, String[]>();
+        dictionary = new HashMap<String, List<String>>();
         readFile();
     }
 
@@ -31,16 +31,33 @@ public class Model extends Observable
      */
     private void readFile() throws FileNotFoundException {
         Scanner input = new Scanner(new File("vocabulary.txt"));
+        List<String> value;
+        
         while(input.hasNextLine()) {
             String key = input.next();
-            String[] value = input.next().split(",");
+            value = new ArrayList<String>(Arrays.asList(input.next().split(",")));
+            
+            // Key -> Values
             dictionary.put(key, value);
+            
+            // Values -> Key
+            for(String eachValue: value){
+                if(dictionary.containsKey(eachValue)){
+                    dictionary.get(eachValue).add(key);
+                }
+                else{
+                    List<String> newList = new ArrayList<String>();
+                    newList.add(key);
+                    dictionary.put(eachValue, newList);
+                }
+            }
         }
     }
     
    
     public void updateWords( String key ){
         words = dictionary.get(key);
+        
         setChanged();
         notifyObservers();
     }
@@ -48,8 +65,8 @@ public class Model extends Observable
     public String getWords(){
         if(words != null){
             String temp = "";
-            for(int i = 0; i < words.length; i++){
-                temp += words[i] + " ";
+            for(int i = 0; i < words.size(); i++){
+                temp += words.get(i) + " ";
             }
             return temp;
         }

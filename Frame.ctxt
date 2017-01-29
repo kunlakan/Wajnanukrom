@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Frame()
-comment0.text=\n\ Constructor\ for\ class\ Frame\n
+comment0.text=\r\n\ Constructor\ for\ class\ Frame\r\n
 comment1.params=
 comment1.target=void\ setFrameProperty()
-comment1.text=\n\ Sets\ property\ of\ the\ frame\n
+comment1.text=\r\n\ Sets\ property\ of\ the\ frame\r\n
 numComments=2

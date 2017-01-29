@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=m
 comment0.target=Controller(Model)
-comment0.text=\n\ Constructor\ for\ Controller\n
+comment0.text=\r\n\ Constructor\ for\ Controller\r\n
 comment1.params=e
 comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
-comment1.text=\n\ Perform\ an\ appropriate\ action\n\ @param\ e\ is\ an\ event\n
+comment1.text=\r\n\ Perform\ an\ appropriate\ action\r\n\ @param\ e\ is\ an\ event\r\n
 numComments=2
