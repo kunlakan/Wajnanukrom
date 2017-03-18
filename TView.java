@@ -18,10 +18,10 @@ public class TView extends JPanel{
         super();
         model = m; 
         setBackground(Color.LIGHT_GRAY);
-        Font khmerFont = new Font("Khmer MN", Font.PLAIN, 14);
+        //Font khmerFont = new Font("Ayuthaya", Font.PLAIN, 14);
         
         JTextField text = new JTextField(30);
-        text.setFont(khmerFont);
+        //text.setFont(khmerFont);
         text.addActionListener(new Controller(model));
         
         add(text);

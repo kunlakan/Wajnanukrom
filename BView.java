@@ -21,7 +21,7 @@ public class BView extends JPanel implements Observer
         
         model = m;
         setBackground(Color.white);
-        Font thaiFont = new Font("Ayuthaya", Font.PLAIN, 18);
+        Font thaiFont = new Font("Roboto", Font.PLAIN, 20);
         setFont(thaiFont);
     }
     //public void updateMessage(String msg){
